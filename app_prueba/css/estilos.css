@@ -1,0 +1,148 @@
+* { 
+    box-sizing: border-box;
+}
+
+
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: clip;
+    background-color: rgb(51, 246, 236);
+}
+
+.areas > header,
+.areas > aside,
+.areas > main,
+.areas > footer {
+    min-width: 0;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+    min-height: 100vh;
+}
+
+.contenedor-formulario {
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: antiquewhite;
+    padding: 20px;
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+.areas {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 220px 1fr;
+    /* Columna izquierda (aside) y resto (main) */
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "aside  main"
+        "footer footer";
+}
+
+/*----------------------------------------    HEADER   ------------------------------------------------------*/
+.areas>header {
+
+    grid-area: header;
+    border: 1px solid black;
+    padding: 2rem;
+
+    .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+}
+
+/*------------------------------------------    ASIDE     ------------------------------------------------------------*/
+.areas>aside {
+    padding: 2rem;
+    grid-area: aside;
+    border: 1px solid black;
+}
+
+/*------------------------------------------        MAIN         -------------------------------------------------------*/
+.areas>main {
+    padding: 2rem;
+    grid-area: main;
+    border: 1px solid black;
+    background-color: antiquewhite;
+    }
+    /*-------------------------------------    DASHBOARD TECNICO   --------------------------------------------------------*/
+
+    .contenedor-tecnico {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+    }
+
+    .tarjetas {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        
+        padding-bottom: 3rem;
+
+    }
+
+
+    .tarjeta {
+        flex: 1 1 160px; /* En vez de width: 120px fijo, se adapta mejor */
+        min-width: 0;
+        background-color: white;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .ticket-recientes {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .caja-opcion {
+        border: 3px solid black;
+    }
+
+    .bloque-tabla {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .tabla {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .tabla th,
+    .tabla td {
+        padding: 10px 12px;
+        text-align: left;
+        border: none;
+        /* Quita cualquier borde previo */
+        border-bottom: 1px solid #cbd5e1;
+        /* Solo línea abajo */
+    }
+
+    .tabla th {
+        border-bottom: 2px solid #94a3b8;
+        /* Línea de abajo un poco más marcada en la cabecera */
+    }
+
+    /*---------------------------------------- FOOTER--------------------------------------------*/
+    .areas>footer {
+        grid-area: footer;
+        border: 1px solid black;
+    }

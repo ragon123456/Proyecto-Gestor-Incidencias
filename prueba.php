@@ -1,1 +1,0 @@
-esto es una prueba para ver si puedo subir codigo al repo de mi compañero
